@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class Player : MonoBehaviour
 {
     public float speed = 5.0f;
-    public UnityEvent shootBullet;
+    public UnityEvent shootBullet; 
     public GameObject bulletPrefab;
     private float clampedX;
 
@@ -22,11 +22,14 @@ public class Player : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space)){
             shootBullet.Invoke();
+            // TODO: In the Unity Editor, we need to identify functions to listen to this event. 
+            //       When this event is invoked, spawn the bullet and play a laser sound! 
         }
     }
 
     public void SpawnBullet(){
-        Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        // TODO: Instantiate the bullet prefab! 
+        // Instantiate(???, ???, Quaternion.identity);
     }
 
 

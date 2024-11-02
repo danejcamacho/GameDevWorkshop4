@@ -360,31 +360,7 @@ MonoBehaviour:
   speed: 5
   shootBullet:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 984738523}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: SpawnBullet
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1356907778}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayShootSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   bulletPrefab: {fileID: 4820623215449923948, guid: dd418a469aa5a4b3aa056641b2c95938, type: 3}
 --- !u!1 &1097070950
 GameObject:
@@ -1004,6 +980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1356907779}
   shootSound: {fileID: 8300000, guid: 8e8500f2f4f024ec0ae1b8a018da964f, type: 3}
+  enemyDeath: {fileID: 8300000, guid: 42bba36cd3fb64fe1aa1ae253ab96e06, type: 3}
 --- !u!82 &1356907779
 AudioSource:
   m_ObjectHideFlags: 0

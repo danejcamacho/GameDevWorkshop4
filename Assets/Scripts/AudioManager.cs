@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioClip shootSound;
+    public AudioClip enemyDeath; 
 
 
     void Start(){
@@ -13,5 +14,8 @@ public class AudioManager : MonoBehaviour
     }
     public void PlayShootSound(){
         audioSource.PlayOneShot(shootSound);
+    }
+    public void PlayEnemyDeathSound(){
+        audioSource.PlayOneShot(enemyDeath);
     }
 }

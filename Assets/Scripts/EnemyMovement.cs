@@ -17,7 +17,6 @@ public class EnemyMovement : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         gameManager = FindObjectOfType<GameManager>();
-        enemyHit.AddListener(gameManager.IncrementScore);
         StartCoroutine("DestroyEnemyCoroutine");
     }
 
@@ -40,8 +39,14 @@ public class EnemyMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Bullet"){
             enemyHit.Invoke();
-            Destroy(other.gameObject);
-            Destroy(gameObject);  
+            // TODO: Can you write two lines that destroy the bullet and this ship? 
+            // ???;
+            // ???;  
+
+            // CHALLENGE: Currently, the enemyHit event is not calling anything when we invoke it.
+            //            Can you think up functions that we might call when an enemy gets hit with a bullet? What parts of the game would be affected?
+            //            Get creative! You might need to write your own functions. Connect them to this event from the Unity Editor. 
+            //            Examples: Increment the score, play an enemy death sound, etc. 
         }
     }
 
