@@ -11,12 +11,10 @@ public class EnemyMovement : MonoBehaviour
     public float sideToSideSpeed = 1.0f;
     private GameObject player;
     public UnityEvent enemyHit;
-    private GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        gameManager = FindObjectOfType<GameManager>();
         StartCoroutine("DestroyEnemyCoroutine");
     }
 
@@ -45,8 +43,9 @@ public class EnemyMovement : MonoBehaviour
 
             // CHALLENGE: Currently, the enemyHit event is not calling anything when we invoke it.
             //            Can you think up functions that we might call when an enemy gets hit with a bullet? What parts of the game would be affected?
-            //            Get creative! You might need to write your own functions. Connect them to this event from the Unity Editor. 
-            //            Examples: Increment the score, play an enemy death sound, etc. 
+            //            Get creative! You might need to write your own functions, or look for existing ones in other files. 
+            //            Connect them to this event from the Unity Editor. 
+            //            
         }
     }
 
